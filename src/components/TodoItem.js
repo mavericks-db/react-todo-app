@@ -12,7 +12,7 @@ class TodoItem extends Component {
     const { todo } = this.props;
     return (
       <li>
-        <input type="checkbox" />
+        <input type="checkbox" checked={todo.completed} />
         {todo.title}
       </li>
     );
