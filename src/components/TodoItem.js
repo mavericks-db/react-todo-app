@@ -37,6 +37,7 @@ class TodoItem extends Component {
           </button>
           <span style={completed ? completedStyle : null}>{title}</span>
         </div>
+        <input type="text" className={styles.textInput} />
       </li>
     );
   }
