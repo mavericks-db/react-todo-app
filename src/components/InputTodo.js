@@ -9,11 +9,20 @@ class InputTodo extends Component {
     };
   }
 
+  onChange = () => {
+    console.log('hello');
+  };
+
   render() {
     const { title } = this.state;
     return (
       <form>
-        <input type="text" placeholder="Add Todo..." value={title} />
+        <input
+          type="text"
+          placeholder="Add Todo..."
+          value={title}
+          onChange={this.onChange}
+        />
         <button type="button">Submit</button>
       </form>
     );
