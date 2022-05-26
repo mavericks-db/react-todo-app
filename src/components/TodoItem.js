@@ -25,7 +25,9 @@ class TodoItem extends Component {
       textDecoration: 'line-through',
     };
 
-    const { todo, handleChangeProps, deleteTodoProps } = this.props;
+    const {
+      todo, handleChangeProps, deleteTodoProps, setUpdate,
+    } = this.props;
     const { completed, id, title } = todo;
     const { editing } = this.state;
 
@@ -58,7 +60,7 @@ class TodoItem extends Component {
           className={styles.textInput}
           value={title}
           onChange={(e) => {
-            console.log(e.target.value, id);
+            setUpdate(e.target.value, id);
           }}
         />
       </li>
@@ -70,6 +72,7 @@ TodoItem.propTypes = {
   todo: PropTypes.shape.isRequired,
   handleChangeProps: PropTypes.func.isRequired,
   deleteTodoProps: PropTypes.func.isRequired,
+  setUpdate: PropTypes.func.isRequired,
 };
 
 export default TodoItem;
