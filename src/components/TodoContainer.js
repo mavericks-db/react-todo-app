@@ -48,6 +48,10 @@ class TodoContainer extends Component {
     }));
   };
 
+  addTodoItem = (title) => {
+    console.log(title);
+  };
+
   render() {
     const { todos } = this.state;
 
