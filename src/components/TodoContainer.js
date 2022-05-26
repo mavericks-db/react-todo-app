@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TodosList from './TodosList';
+import Header from './Header';
 
 class TodoContainer extends Component {
   constructor(props) {
@@ -28,7 +29,13 @@ class TodoContainer extends Component {
 
   render() {
     const { todos } = this.state;
-    return <TodosList todos={todos} />;
+
+    return (
+      <div>
+        <Header />
+        <TodosList todos={todos} />
+      </div>
+    );
   }
 }
 export default TodoContainer;
