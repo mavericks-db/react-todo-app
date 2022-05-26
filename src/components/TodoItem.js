@@ -9,6 +9,10 @@ class TodoItem extends Component {
     this.state = {};
   }
 
+  handleEditing = () => {
+    console.log('edit mode activated');
+  };
+
   render() {
     const completedStyle = {
       fontStyle: 'italic',
