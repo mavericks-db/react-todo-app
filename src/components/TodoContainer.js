@@ -27,8 +27,8 @@ class TodoContainer extends Component {
     };
   }
 
-  handleChange = () => {
-    console.log('clicked');
+  handleChange = (id) => {
+    console.log('clicked', id);
   };
 
   render() {
