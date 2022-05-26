@@ -28,8 +28,8 @@ class TodoContainer extends Component {
   }
 
   handleChange = (id) => {
-    this.setState((state) => ({
-      todos: state.todos.map((todo) => {
+    this.setState((prevState) => ({
+      todos: prevState.todos.map((todo) => {
         if (todo.id === id) {
           return {
             ...todo,
