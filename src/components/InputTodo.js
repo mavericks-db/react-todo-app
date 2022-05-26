@@ -20,10 +20,14 @@ class InputTodo extends Component {
     e.preventDefault();
     const { addTodoProps } = this.props;
     const { title } = this.state;
-    addTodoProps(title);
-    this.setState({
-      title: '',
-    });
+    if (title.trim()) {
+      addTodoProps(title);
+      this.setState({
+        title: '',
+      });
+    } else {
+      alert('Please write item');
+    }
   };
 
   render() {
