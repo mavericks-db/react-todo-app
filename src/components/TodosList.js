@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import TodoItem from './TodoItem';
 
-class TodosList extends React.Component {
+class TodosList extends Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +14,7 @@ class TodosList extends React.Component {
     return (
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
+          <TodoItem key={todo.id} todo={todo} />
         ))}
       </ul>
     );
