@@ -12,10 +12,11 @@ class TodoItem extends Component {
   render() {
     const { todo, handleChangeProps, deleteTodoProps } = this.props;
     return (
-      <li>
+      <li className={styles.item}>
         <input
           type="checkbox"
           checked={todo.completed}
+          className={styles.checkbox}
           onChange={() => handleChangeProps(todo.id)}
         />
         <button type="button" onClick={() => deleteTodoProps(todo.id)}>
