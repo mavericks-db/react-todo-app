@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class InputTodo extends Component {
   constructor(props) {
@@ -17,8 +18,9 @@ class InputTodo extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    const { addTodoProps } = this.props;
     const { title } = this.state;
-    console.log(title);
+    addTodoProps(title);
   };
 
   render() {
@@ -37,4 +39,9 @@ class InputTodo extends Component {
     );
   }
 }
+
+InputTodo.propTypes = {
+  addTodoProps: PropTypes.func.isRequired,
+};
+
 export default InputTodo;
