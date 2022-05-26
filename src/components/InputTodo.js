@@ -9,8 +9,10 @@ class InputTodo extends Component {
     };
   }
 
-  onChange = () => {
-    console.log('hello');
+  onChange = (e) => {
+    this.setState({
+      title: e.target.value,
+    });
   };
 
   render() {
