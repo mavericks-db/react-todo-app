@@ -21,16 +21,18 @@ class TodoItem extends Component {
     const { completed, id, title } = todo;
     return (
       <li className={styles.item}>
-        <input
-          type="checkbox"
-          checked={completed}
-          className={styles.checkbox}
-          onChange={() => handleChangeProps(id)}
-        />
-        <button type="button" onClick={() => deleteTodoProps(id)}>
-          Delete
-        </button>
-        <span style={completed ? completedStyle : null}>{title}</span>
+        <div onDoubleClick={this.handleEditing}>
+          <input
+            type="checkbox"
+            checked={completed}
+            className={styles.checkbox}
+            onChange={() => handleChangeProps(id)}
+          />
+          <button type="button" onClick={() => deleteTodoProps(id)}>
+            Delete
+          </button>
+          <span style={completed ? completedStyle : null}>{title}</span>
+        </div>
       </li>
     );
   }
