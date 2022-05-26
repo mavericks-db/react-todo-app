@@ -10,6 +10,13 @@ class TodoItem extends Component {
   }
 
   render() {
+    const completedStyle = {
+      fontStyle: 'italic',
+      color: '#595959',
+      opacity: 0.4,
+      textDecoration: 'line-through',
+    };
+
     const { todo, handleChangeProps, deleteTodoProps } = this.props;
     return (
       <li className={styles.item}>
