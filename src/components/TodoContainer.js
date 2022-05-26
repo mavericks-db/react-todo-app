@@ -58,7 +58,7 @@ class TodoContainer extends Component {
     return (
       <div>
         <Header />
-        <InputTodo />
+        <InputTodo addTodoProps={this.addTodoItem} />
         <TodosList
           todos={todos}
           handleChangeProps={this.handleChange}
