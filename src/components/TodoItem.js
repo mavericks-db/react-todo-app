@@ -40,7 +40,7 @@ class TodoItem extends Component {
 
     return (
       <li className={styles.item}>
-        <div onDoubleClick={this.handleEditing}>
+        <div onDoubleClick={this.handleEditing} style={viewMode}>
           <input
             type="checkbox"
             checked={completed}
@@ -52,7 +52,7 @@ class TodoItem extends Component {
           </button>
           <span style={completed ? completedStyle : null}>{title}</span>
         </div>
-        <input type="text" className={styles.textInput} />
+        <input type="text" style={editMode} className={styles.textInput} />
       </li>
     );
   }
