@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
 class InputTodo extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
   render() {
     return (
       <form>
         <input type="text" placeholder="Add Todo..." />
-        <button>Submit</button>
+        <button type="button">Submit</button>
       </form>
     );
   }
