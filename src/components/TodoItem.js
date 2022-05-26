@@ -52,7 +52,12 @@ class TodoItem extends Component {
           </button>
           <span style={completed ? completedStyle : null}>{title}</span>
         </div>
-        <input type="text" style={editMode} className={styles.textInput} />
+        <input
+          type="text"
+          style={editMode}
+          className={styles.textInput}
+          value={title}
+        />
       </li>
     );
   }
