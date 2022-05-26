@@ -29,7 +29,7 @@ class TodoItem extends Component {
         <button type="button" onClick={() => deleteTodoProps(todo.id)}>
           Delete
         </button>
-        {todo.title}
+        <span style={todo.completed ? completedStyle : null}>{todo.title}</span>
       </li>
     );
   }
