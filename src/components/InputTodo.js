@@ -15,6 +15,12 @@ class InputTodo extends Component {
     });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { title } = this.state;
+    console.log(title);
+  };
+
   render() {
     const { title } = this.state;
     return (
