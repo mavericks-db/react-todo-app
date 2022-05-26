@@ -27,6 +27,17 @@ class TodoItem extends Component {
 
     const { todo, handleChangeProps, deleteTodoProps } = this.props;
     const { completed, id, title } = todo;
+    const { editing } = this.state;
+
+    const viewMode = {};
+    const editMode = {};
+
+    if (editing) {
+      viewMode.display = 'none';
+    } else {
+      editMode.display = 'none';
+    }
+
     return (
       <li className={styles.item}>
         <div onDoubleClick={this.handleEditing}>
