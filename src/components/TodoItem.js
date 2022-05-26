@@ -1,17 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-class TodoItem extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
-  render() {
-    const { todo } = this.props;
-    return <li>{todo.title}</li>;
-  }
+function TodoItem(props) {
+  const { todo } = props;
+  return <li>{todo.title}</li>;
 }
 
 TodoItem.propTypes = {
