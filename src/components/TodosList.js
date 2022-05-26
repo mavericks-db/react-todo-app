@@ -13,7 +13,7 @@ class TodosList extends React.Component {
     return (
       <ul>
         {todos.map((todo) => (
-          <li>{todo.title}</li>
+          <li key={todo.id}>{todo.title}</li>
         ))}
       </ul>
     );
