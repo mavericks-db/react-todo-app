@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styles from './TodoItem.module.css';
 
 class TodoItem extends Component {
   constructor(props) {
@@ -17,7 +18,9 @@ class TodoItem extends Component {
           checked={todo.completed}
           onChange={() => handleChangeProps(todo.id)}
         />
-        <button type="button" onClick={() => deleteTodoProps(todo.id)}>Delete</button>
+        <button type="button" onClick={() => deleteTodoProps(todo.id)}>
+          Delete
+        </button>
         {todo.title}
       </li>
     );
