@@ -61,6 +61,10 @@ class TodoContainer extends Component {
     });
   };
 
+  setUpdate = (updatedTitle, id) => {
+    console.log(updatedTitle, id);
+  };
+
   render() {
     const { todos } = this.state;
 
