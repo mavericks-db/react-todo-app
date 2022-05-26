@@ -17,6 +17,7 @@ class TodoItem extends Component {
           checked={todo.completed}
           onChange={() => handleChangeProps(todo.id)}
         />
+        <button type="button">Delete</button>
         {todo.title}
       </li>
     );
