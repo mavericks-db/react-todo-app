@@ -9,7 +9,7 @@ class TodoItem extends Component {
   }
 
   render() {
-    const { todo, handleChangeProps } = this.props;
+    const { todo, handleChangeProps, deleteTodoProps } = this.props;
     return (
       <li>
         <input
@@ -17,7 +17,7 @@ class TodoItem extends Component {
           checked={todo.completed}
           onChange={() => handleChangeProps(todo.id)}
         />
-        <button type="button">Delete</button>
+        <button type="button" onClick={() => deleteTodoProps(todo.id)}>Delete</button>
         {todo.title}
       </li>
     );
@@ -27,6 +27,7 @@ class TodoItem extends Component {
 TodoItem.propTypes = {
   todo: PropTypes.shape.isRequired,
   handleChangeProps: PropTypes.func.isRequired,
+  deleteTodoProps: PropTypes.func.isRequired,
 };
 
 export default TodoItem;
