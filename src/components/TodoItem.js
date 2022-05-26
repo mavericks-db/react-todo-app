@@ -9,13 +9,13 @@ class TodoItem extends Component {
   }
 
   render() {
-    const { todo } = this.props;
+    const { todo, handleChangeProps } = this.props;
     return (
       <li>
         <input
           type="checkbox"
           checked={todo.completed}
-          onChange={() => console.log('clicked')}
+          onChange={() => handleChangeProps()}
         />
         {todo.title}
       </li>
@@ -25,6 +25,7 @@ class TodoItem extends Component {
 
 TodoItem.propTypes = {
   todo: PropTypes.shape.isRequired,
+  handleChangeProps: PropTypes.func.isRequired,
 };
 
 export default TodoItem;
