@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const InputTodo = () => <div />;
+const InputTodo = () => {
+  console.log(useState('hello'));
+  return <div />;
+};
 
 export default InputTodo;
