@@ -17,6 +17,10 @@ class TodoItem extends Component {
     });
   };
 
+  handleUpdatedDone = (event) => {
+    console.log(event.key);
+  }
+
   render() {
     const completedStyle = {
       fontStyle: 'italic',
