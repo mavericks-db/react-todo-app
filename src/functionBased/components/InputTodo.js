@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const InputTodo = () => {
+const InputTodo = (props) => {
   const [inputText, setInputText] = useState({
-    fName: '',
-    lastName: '',
+    title: '',
   });
 
   const onChange = (e) => {
@@ -15,35 +15,34 @@ const InputTodo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submitted');
+    const { addTodoProps } = props;
+    if (inputText.title.trim()) {
+      addTodoProps(inputText.title);
+      setInputText({
+        title: '',
+      });
+    } else {
+      alert('Please write item');
+    }
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className="form-container">
-        <input
-          type="text"
-          className="input-text"
-          placeholder="Add first name"
-          value={inputText.fName}
-          name="fName"
-          onChange={onChange}
-        />
-        <input
-          type="text"
-          className="input-text"
-          placeholder="Add last name"
-          value={inputText.lastName}
-          name="lastName"
-          onChange={onChange}
-        />
-
-        <button className="input-submit" type="submit">Submit</button>
-      </form>
-      <h2>{inputText.fName}</h2>
-      <h2>{inputText.lastName}</h2>
-    </>
+    <form onSubmit={handleSubmit} className="form-container">
+      <input
+        type="text"
+        className="input-text"
+        placeholder="Add todo..."
+        value={inputText.title}
+        name="title"
+        onChange={onChange}
+      />
+      <button className="input-submit" type="submit">Submit</button>
+    </form>
   );
+};
+
+InputTodo.propTypes = {
+  addTodoProps: PropTypes.func.isRequired,
 };
 
 export default InputTodo;
