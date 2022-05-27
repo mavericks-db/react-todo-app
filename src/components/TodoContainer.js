@@ -13,6 +13,12 @@ class TodoContainer extends Component {
     };
   }
 
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
+
   handleChange = (id) => {
     this.setState((prevState) => ({
       todos: prevState.todos.map((todo) => {
