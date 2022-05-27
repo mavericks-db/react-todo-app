@@ -62,6 +62,7 @@ class TodoItem extends Component {
           onChange={(e) => {
             setUpdate(e.target.value, id);
           }}
+          onKeyDown={this.handleUpdatedDone}
         />
       </li>
     );
