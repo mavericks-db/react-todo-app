@@ -46,17 +46,24 @@ const TodoContainer = () => {
     );
   };
 
-  useEffect(() => {
-    console.log('test run');
+  // useEffect(() => {
+  //   console.log('test run');
 
+  //   // getting stored items
+  //   const temp = localStorage.getItem('todos');
+  //   const loadedTodos = JSON.parse(temp);
+
+  //   if (loadedTodos) {
+  //     setTodos(loadedTodos);
+  //   }
+  // }, []);
+
+  function getInitialTodos() {
     // getting stored items
     const temp = localStorage.getItem('todos');
-    const loadedTodos = JSON.parse(temp);
-
-    if (loadedTodos) {
-      setTodos(loadedTodos);
-    }
-  }, []);
+    const savedTodos = JSON.parse(temp);
+    return savedTodos || [];
+  }
 
   useEffect(() => {
     // storing todos items
