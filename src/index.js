@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // component file
-import TodoContainer from './components/TodoContainer';
+import TodoContainer from './functionBased/components/TodoContainer';
 
 // stylesheet
-import './App.scss';
+import './functionBased/App.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
