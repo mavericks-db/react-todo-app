@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Header from './Header';
 import InputTodo from './InputTodo';
@@ -20,9 +20,7 @@ const TodoContainer = () => {
   };
 
   const delTodo = (id) => {
-    setTodos([
-      ...todos.filter((todo) => todo.id !== id),
-    ]);
+    setTodos([...todos.filter((todo) => todo.id !== id)]);
   };
 
   const addTodoItem = (title) => {
@@ -47,6 +45,10 @@ const TodoContainer = () => {
       }),
     );
   };
+
+  useEffect(() => {
+    console.log('test run');
+  });
 
   return (
     <div className="container">
