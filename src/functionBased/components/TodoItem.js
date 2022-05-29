@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './TodoItem.module.scss';
+import { FaTrash } from 'react-icons/fa';
 
 const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
 
-  useEffect(() => () => {
-    console.log('Cleaning up...');
-  }, []);
+  useEffect(
+    () => () => {
+      console.log('Cleaning up...');
+    },
+    []
+  );
 
   const handleEditing = () => {
     setEditing(true);
@@ -26,9 +30,7 @@ const TodoItem = (props) => {
     textDecoration: 'line-through',
   };
 
-  const {
-    todo, handleChangeProps, deleteTodoProps, setUpdate,
-  } = props;
+  const { todo, handleChangeProps, deleteTodoProps, setUpdate } = props;
   const { completed, id, title } = todo;
 
   const viewMode = {};
@@ -50,7 +52,7 @@ const TodoItem = (props) => {
           onChange={() => handleChangeProps(id)}
         />
         <button type="button" onClick={() => deleteTodoProps(id)}>
-          Delete
+          <FaTrash />
         </button>
         <span style={completed ? completedStyle : null}>{title}</span>
       </div>
