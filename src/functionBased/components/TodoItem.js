@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import styles from './TodoItem.module.scss';
 import { FaTrash } from 'react-icons/fa';
+import styles from './TodoItem.module.scss';
 
 const TodoItem = (props) => {
   const [editing, setEditing] = useState(false);
@@ -10,7 +10,7 @@ const TodoItem = (props) => {
     () => () => {
       console.log('Cleaning up...');
     },
-    []
+    [],
   );
 
   const handleEditing = () => {
@@ -30,7 +30,9 @@ const TodoItem = (props) => {
     textDecoration: 'line-through',
   };
 
-  const { todo, handleChangeProps, deleteTodoProps, setUpdate } = props;
+  const {
+    todo, handleChangeProps, deleteTodoProps, setUpdate,
+  } = props;
   const { completed, id, title } = todo;
 
   const viewMode = {};
