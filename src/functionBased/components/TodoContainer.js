@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 import Header from './Header';
 import InputTodo from './InputTodo';
 import TodosList from './TodosList';
+import About from '../../pages/About';
+import NotMatch from '../../pages/NotMatch';
 
 const TodoContainer = () => {
   function getInitialTodos() {
@@ -79,6 +81,8 @@ const TodoContainer = () => {
           </div>
         )}
       />
+      <Route path="/about" element={<About />} />
+      <Route path="*" element={<NotMatch />} />
     </Routes>
   );
 };
