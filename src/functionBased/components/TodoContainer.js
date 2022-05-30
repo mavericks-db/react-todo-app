@@ -6,6 +6,7 @@ import InputTodo from './InputTodo';
 import TodosList from './TodosList';
 import About from '../../pages/About';
 import NotMatch from '../../pages/NotMatch';
+import Navbar from './Navbar';
 
 const TodoContainer = () => {
   function getInitialTodos() {
