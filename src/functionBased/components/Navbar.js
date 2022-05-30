@@ -29,6 +29,8 @@ const Navbar = () => {
             <NavLink
               to={link.path}
               className={(navData) => (navData.isActive ? 'active-style' : 'none')}
+              onClick={() => closeMenu()}
+              exact
             >
               {link.text}
             </NavLink>
