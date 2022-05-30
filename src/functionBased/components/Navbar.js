@@ -23,7 +23,7 @@ const Navbar = () => {
       <button type="button" onClick={handleToggle}>
         {navbarOpen ? 'Close' : 'Open'}
       </button>
-      <ul>
+      <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
         {links.map((link) => (
           <li key={link.id}>
             <NavLink
