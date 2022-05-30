@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink, useState } from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -17,6 +17,7 @@ const Navbar = () => {
   ];
   return (
     <nav className="navBar">
+      <button type="button">{navbarOpen ? 'Close' : 'Open'}</button>
       <ul>
         {links.map((link) => (
           <li key={link.id}>
