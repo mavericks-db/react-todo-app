@@ -18,6 +18,11 @@ const Navbar = () => {
   const handleToggle = () => {
     setNavbarOpen((prev) => !prev);
   };
+
+  const closeMenu = () => {
+    setNavbarOpen(false);
+  };
+
   return (
     <nav className="navBar">
       <button type="button" onClick={handleToggle}>
@@ -30,7 +35,6 @@ const Navbar = () => {
               to={link.path}
               className={(navData) => (navData.isActive ? 'active-style' : 'none')}
               onClick={() => closeMenu()}
-              exact
             >
               {link.text}
             </NavLink>
