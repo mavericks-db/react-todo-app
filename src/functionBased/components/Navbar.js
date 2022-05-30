@@ -15,9 +15,14 @@ const Navbar = () => {
       text: 'About',
     },
   ];
+  const handleToggle = () => {
+    setNavbarOpen((prev) => !prev);
+  };
   return (
     <nav className="navBar">
-      <button type="button" onClick={handleToggle}>{navbarOpen ? 'Close' : 'Open'}</button>
+      <button type="button" onClick={handleToggle}>
+        {navbarOpen ? 'Close' : 'Open'}
+      </button>
       <ul>
         {links.map((link) => (
           <li key={link.id}>
