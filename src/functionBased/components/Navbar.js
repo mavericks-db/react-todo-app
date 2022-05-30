@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
   return (
     <nav className="navBar">
-      <button type="button">{navbarOpen ? 'Close' : 'Open'}</button>
+      <button type="button" onClick={handleToggle}>{navbarOpen ? 'Close' : 'Open'}</button>
       <ul>
         {links.map((link) => (
           <li key={link.id}>
