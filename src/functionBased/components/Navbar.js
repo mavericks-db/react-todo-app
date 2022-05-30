@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, useState } from 'react-router-dom';
 
 const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
   const links = [
     {
       id: 1,
