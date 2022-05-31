@@ -13,7 +13,7 @@
 - [x] Code Editor: VS Code
 
 ## Website Mockup 📱 💻 🖥️
-![app_screenshot](https://user-images.githubusercontent.com/98527559/171048163-51c6aae2-9359-4c05-b06d-b381feafc3f6.png)
+![app_screenshot](https://user-images.githubusercontent.com/98527559/171156632-a0728827-58e6-4706-b387-85c67a61978f.png)
 
 ## Screenshots 📸
 Screenshots can be found in the repository.
